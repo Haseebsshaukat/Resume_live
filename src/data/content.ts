@@ -7,7 +7,7 @@ export const site = {
   phone: "+92 307 6082016",
   linkedin: "https://linkedin.com/in/haseeb-shoukat-5ab0a02b3",
   github: "https://github.com/Haseebsshaukat",
-  resumeUrl: "/Haseeb%20Shoukat.pdf",
+  resumeUrl: "/Resume_live/Haseeb%20Shoukat.pdf",
   resumeDownloadName: "Haseeb Shoukat.pdf",
   openToWork: true,
 };

@@ -18,22 +18,36 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000/Resume_live](http://localhost:3000/Resume_live) (base path for GitHub Pages).
 
 ## Add your resume
 
-1. Export your resume as PDF.
-2. Save it as `public/resume.pdf`.
-3. The "View Resume" and "Download Resume" buttons will link to it.
+1. Put your PDF in **`public/Haseeb Shoukat.pdf`** (or the filename in `src/data/content.ts` → `resumeUrl` / `resumeDownloadName`).
+2. The "Download Resume" buttons will link to it. For GitHub Pages the link is `/Resume_live/Haseeb%20Shoukat.pdf`.
 
 ## Build & deploy
+
+### GitHub Pages (this repo)
+
+- The repo is set up for **GitHub Pages** via **GitHub Actions**.
+- On every **push to `main`**, the workflow builds the Next.js static export and deploys the **`out/`** folder to GitHub Pages.
+- **Live site:** https://haseebsshaukat.github.io/Resume_live/
+- To force a redeploy: push a new commit to `main`, or in the repo go to **Actions** → **Deploy to GitHub Pages** → **Run workflow**.
+
+**If the live site still shows an old version:**
+
+1. In the repo, open the **Actions** tab and check the latest **Deploy to GitHub Pages** run (success or failure).
+2. If the workflow failed, open the run and fix the error (e.g. build failure).
+3. If it succeeded, do a hard refresh (Ctrl+Shift+R) or try in an incognito window—GitHub’s CDN can cache the old site briefly.
+
+### Local build
 
 ```bash
 npm run build
 npm start
 ```
 
-Deploy to **Vercel** (recommended), Netlify, or any Node host.
+Then open [http://localhost:3000/Resume_live](http://localhost:3000/Resume_live).
 
 ## Project structure
 

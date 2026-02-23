@@ -10,6 +10,7 @@
 # next
 /.next/
 /out/
+# static export output (built by CI for GitHub Pages)
 
 # production
 /build
